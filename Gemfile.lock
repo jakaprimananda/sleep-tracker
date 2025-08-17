@@ -100,6 +100,7 @@ GEM
     debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    diff-lcs (1.6.2)
     dotenv (3.1.8)
     dotenv-rails (3.1.8)
       dotenv (= 3.1.8)
@@ -107,6 +108,11 @@ GEM
     drb (2.2.3)
     erb (5.0.2)
     erubi (1.13.1)
+    factory_bot (6.5.5)
+      activesupport (>= 6.1.0)
+    factory_bot_rails (6.5.0)
+      factory_bot (~> 6.5)
+      railties (>= 6.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.7)
@@ -234,6 +240,23 @@ GEM
     reline (0.6.2)
       io-console (~> 0.5)
     rexml (3.4.1)
+    rspec-core (3.13.5)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-rails (8.0.2)
+      actionpack (>= 7.2)
+      activesupport (>= 7.2)
+      railties (>= 7.2)
+      rspec-core (~> 3.13)
+      rspec-expectations (~> 3.13)
+      rspec-mocks (~> 3.13)
+      rspec-support (~> 3.13)
+    rspec-support (3.13.4)
     rubocop (1.79.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -271,6 +294,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
+    shoulda-matchers (4.5.1)
+      activesupport (>= 4.2.0)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
@@ -323,13 +348,16 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
+  factory_bot_rails
   importmap-rails
   jbuilder
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.2)
+  rspec-rails
   rubocop-rails-omakase
   selenium-webdriver
+  shoulda-matchers (~> 4.0)
   sprockets-rails
   stimulus-rails
   turbo-rails
